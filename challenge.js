@@ -7,25 +7,25 @@ class Node {
 }
 
 class Queue {
-  add(number) {
+  add(number){
     let current = this.head;
-    if (this.head == null) {
+    if(this.head == null){
       this.head = new Node(number);
       return;
     }
-
-    while (current.next_node != null) {
+    while(current.next_node !== null){
       current = current.next_node;
     }
     current.next_node = new Node(number);
   }
 
-  remove() {
+  remove(){
     let current = this.head;
-    if (current == null) {
+    console.log(this.head);
+    if(this.head == null){
       return -1;
     }
-    if (current.next_node == null) {
+    if(current.next_node == null){
       this.head = null;
       return current.value;
     }
